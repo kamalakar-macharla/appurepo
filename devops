@@ -1,5 +1,5 @@
 
-
+git: log, fork, branches, pull request, merge
 Jenkinsfile
 
 pom.xml file  for maven : pom.xml can be found in root folder of the java project.
@@ -9,6 +9,8 @@ pom.xml file  for maven : pom.xml can be found in root folder of the java projec
 >python -V
 >git clone repo-url
 >mvn install
+>mvn clean install
+.m2 folder   and maven central , Artifactory, dependency jar files...
 
 
 
