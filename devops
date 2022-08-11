@@ -10,7 +10,7 @@ pom.xml file  for maven : pom.xml can be found in root folder of the java projec
 >git clone repo-url
 >mvn install
 >mvn clean install
-.m2 folder   and maven central , Artifactory, dependency jar files...
+.m2 folder  C:\Users\HP\.m2\repository  and maven central , Artifactory, dependency jar files...
 
 
 
