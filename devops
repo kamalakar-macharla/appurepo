@@ -4,9 +4,11 @@ Jenkinsfile
 
 pom.xml file  for maven : pom.xml can be found in root folder of the java project.
 
-
-
-
+>java -version
+>mvn -V
+>python -V
+>git clone repo-url
+>mvn install
 
 
 
