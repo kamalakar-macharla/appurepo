@@ -8,6 +8,8 @@ pom.xml file  for maven : pom.xml can be found in root folder of the java projec
 >mvn -V
 >python -V
 >git clone repo-url
+
+https://github.com/niwasawa/java-hello-world-with-maven
 >mvn install
 >mvn clean install
 .m2 folder  C:\Users\HP\.m2\repository  and maven central , Artifactory, dependency jar files...
