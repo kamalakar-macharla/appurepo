@@ -1,6 +1,6 @@
 node{
 stage('CheckOut'){
-  git branch: 'main', credentialsId: '633eeab8-c94e-41b3-b3ee-4465831bd3bd', url: 'https://github.com/kamalakar-macharla/appurepo.git'
+  git branch: "${env.BRANCHNAME}", credentialsId: "633eeab8-c94e-41b3-b3ee-4465831bd3bd", url: "https://github.com/kamalakar-macharla/${env.REPONAME}.git"
   echo 'this is my code clone stage'
  }
  stage('Build'){
