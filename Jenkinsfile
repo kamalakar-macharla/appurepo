@@ -5,7 +5,9 @@ stage('CheckOut'){
  }
  stage('Build'){
   echo 'this is my build stage'
-  bat """ systeminfo
+  bat """ 
+    echo %name% >> studentinfo.txt
+   
     """
  }
  stage('Scan'){
