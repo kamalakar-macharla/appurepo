@@ -1,0 +1,17 @@
+node{
+ stage('clone'){
+  echo 'this is my clone stage'
+ }
+ stage('build'){
+  echo 'this is my build stage'
+ }
+ stage('scan'){
+  echo 'this is my scan stage'
+ }
+ stage('upload to nexus'){
+  echo 'this is my upload to nexus stage'
+ }
+  stage('Deploy'){
+  echo 'this is my deploy to joss server stage'
+ }
+}
