@@ -1,0 +1,47 @@
+
+node('azure-vm'){   # node-lable
+
+ stage('build'){
+	$ git clone https://github.com/appu312/azure-voting-app-redis.git
+	$ cd azure-voting-app-redis
+	$ docker-compose up -d
+	$ docker images
+ }
+ stage('Publish images to ACR'){
+	$ az acr login -n <acrLoginServer>
+	$ docker tag azure-vote-front <acrLoginServer>/azure-vote-front:v1
+	$ docker push <acrLoginServer>/azure-vote-front:v1
+ }
+ stage('Deploy app to AKS'){
+ 
+ 
+ 	$ kubectl apply -f azure-vote-all-in-one-redis.yaml
+	$ kubectl get service azure-vote-front --watch
+ }
+ 
+}
+
+----------------------------------------------------------
+
+node('azure-vm'){   # node-lable
+
+ stage('build'){
+	$ git clone https://github.com/ltwlf/azure-functions-docker-hello.git
+	$ cd azure-functions-docker-hello
+	$ ls -la
+	$ cat ./Dockerfile
+ }
+ 
+ stage('Publish images to ACR'){
+	$ docker login heyacr.azurecr.io -u heyacr -p epcSYEIN739SANQWEUNZUIE
+	$ docker build -t heyacr.azurecr.io/hello-docker-function:latest .
+	$ docker push heyacr.azurecr.io/hello-docker-function:latest
+ }
+ 
+ stage('Deploy app to AKS'){
+
+ }
+ 
+}
+
+
